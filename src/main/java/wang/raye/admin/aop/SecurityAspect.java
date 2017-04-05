@@ -56,7 +56,7 @@ public class SecurityAspect {
                 return "/login";
             }else{
                 //返回没有权限的json
-                return WebResult.noAuthority();
+                return WebResult.noLogin();
             }
 
         }

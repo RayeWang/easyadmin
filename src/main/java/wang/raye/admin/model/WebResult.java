@@ -15,6 +15,9 @@ public class WebResult {
 	private static final int NOAUTHORITY = 303;
 	private static final String NOAUTHORITYMSG = "没有权限";
 
+	private static final int NOLOGIN = 304;
+	private static final String NOLOGINMSG = "没有登录";
+
 	private static final int NEEDPARAMSCODE = 1002;
 	private static final String NEEDPARAMS = "请输入参数：";
 	
@@ -106,6 +109,14 @@ public class WebResult {
      */
 	public static WebResult noAuthority(){
 		return new WebResult(NOAUTHORITY,NOAUTHORITYMSG);
+	}
+
+	/**
+	 * 没有登录
+	 * @return
+	 */
+	public static WebResult noLogin(){
+		return new WebResult(NOLOGIN,NOLOGINMSG);
 	}
 
 	public static WebResult error(String msg){
