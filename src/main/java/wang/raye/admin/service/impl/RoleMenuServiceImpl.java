@@ -25,7 +25,7 @@ public class RoleMenuServiceImpl implements RoleMenuService {
         List<Menu> menus = mapper.selectByRoleId(id);
         for(Menu menu : menus){
             int parentid = menu.getParentId();
-            if(menu.getRoleid() > 0){
+            if(menu.getRoleid() != 0){
                 menu.setAdditionalParameters(new HashMap<String, Object>());
                 menu.getAdditionalParameters().put("item-selected",true);
             }

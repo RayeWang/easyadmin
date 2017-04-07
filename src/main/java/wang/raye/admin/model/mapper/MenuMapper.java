@@ -72,7 +72,7 @@ public interface MenuMapper {
      */
     @Select({"SELECT id, name, url, icon, menu_type, display, parent_id FROM menu WHERE id IN(",
             "SELECT menuid FROM role_menu WHERE roleid IN ",
-            "(SELECT roleid FROM user_role WHERE userid=#{userid}) OR roleid=0) AND menu_type<>'2' AND `status`='1'"})
+            "(SELECT roleid FROM user_role WHERE userid=#{userid}) OR roleid=-1) AND menu_type<>'2' AND `status`='1'"})
     @Results({
             @Result(column="id", property="id", jdbcType= JdbcType.INTEGER, id=true),
             @Result(column="name", property="name", jdbcType= JdbcType.VARCHAR),
@@ -92,7 +92,7 @@ public interface MenuMapper {
      */
     @Select({"SELECT url FROM menu WHERE id IN(",
             "SELECT menuid FROM role_menu WHERE roleid IN ",
-            "(SELECT roleid FROM user_role WHERE userid=#{userid}) OR roleid=0) AND `status`='1'"})
+            "(SELECT roleid FROM user_role WHERE userid=#{userid}) OR roleid=-1) AND `status`='1'"})
     List<String> selectAuthorities(int userid);
 
     /**

@@ -63,7 +63,7 @@ public class SecurityAspect {
         AdminUser user = (AdminUser) session.getAttribute("loginUser");
         //判断是否有权限
         List<String> authorities = (List<String>) session.getAttribute("authorities");
-        if(authorities.contains(uri) || 0 == user.getId() || LOGINOUTURL.equals(uri)) {
+        if(authorities.contains(uri) || -1 == user.getId() || LOGINOUTURL.equals(uri)) {
             return pjp.proceed();
         }else{
             Class returnType = ((MethodSignature) pjp.getSignature()).getReturnType();

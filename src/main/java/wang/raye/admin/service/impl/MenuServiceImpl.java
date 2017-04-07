@@ -52,7 +52,7 @@ public class MenuServiceImpl implements MenuService {
 	public List<Menu> selectByUser(int userId) {
 		HashMap<Integer,ArrayList<Menu>> map = new HashMap<Integer, ArrayList<Menu>>();
 		List<Menu> tempMenus = null;
-		if(userId == 0){
+		if(userId == -1){
 			MenuCriteria criteria = new MenuCriteria();
 			criteria.createCriteria().andStatusEqualTo("1").andMenuTypeNotEqualTo("2");
 			tempMenus = mapper.selectByExample(criteria);
@@ -83,7 +83,7 @@ public class MenuServiceImpl implements MenuService {
 
 	@Override
 	public List<String> selectAuthorities(int userId) {
-		if(userId == 0){
+		if(userId == -1){
 			return mapper.selectAuthoritiesByRoot();
 		}
 		return mapper.selectAuthorities(userId);
