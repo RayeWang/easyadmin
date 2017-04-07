@@ -53,7 +53,7 @@ public class SecurityAspect {
             Class returnType = ((MethodSignature) pjp.getSignature()).getReturnType();
             if(returnType == String.class || returnType == ModelAndView.class){
                 //返回到登录页面
-                return "/login";
+                return "/nologin";
             }else{
                 //返回没有权限的json
                 return WebResult.noLogin();

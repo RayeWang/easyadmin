@@ -50,6 +50,12 @@ window.quickAjax = function(opt){
                     alert(data.msg);
                 }else if(data.code == 303){
                     alert("没有权限访问");
+                }else if(data.code == 304){
+                    //没有登录
+                    alert("登录已失效，请重新登录",function () {
+                        window.parent.frames.location.href="/admin/login";
+                    });
+
                 }else{
                     alert('服务器繁忙');
                 }

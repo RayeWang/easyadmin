@@ -46,7 +46,10 @@ public class MainController {
      * @return
      */
     @RequestMapping(value = "login",method = RequestMethod.GET)
-    public String login(){
+    public String login(@RequestParam(defaultValue = "0") int type){
+        if(type == 1){
+            return "nologin";
+        }
         return "login";
     }
 
