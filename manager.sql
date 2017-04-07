@@ -29,8 +29,6 @@ CREATE TABLE IF NOT EXISTS admin_user(
 	update_time TIMESTAMP NULL COMMENT '更新时间'
 )ENGINE=InnoDB;
 -- 插入超级用户
-INSERT INTO `zyzl`.`admin_user` (`id`, `name`, `psw`,`creator`, `last_login_time`) VALUES ('0', 'root', 'E10ADC3949BA59ABBE56E057F20F883E','1', '2017-04-05 20:26:22');
-
 -- 创建角色表
 DROP TABLE IF EXISTS role;
 CREATE TABLE IF NOT EXISTS role(
@@ -42,8 +40,6 @@ CREATE TABLE IF NOT EXISTS role(
   update_user INT  COMMENT '更新者id',
 	update_time TIMESTAMP NULL COMMENT '更新时间'
 )ENGINE=InnoDB;
--- 因为id是自增，所以强行插入id不行，需要手动修正数据
-INSERT INTO `zyzl`.`role` (`id`, `name`, `create_time`, `creator`, `update_time`, `update_user`, `description`) VALUES ('0', '默认权限', '2017-03-18 17:35:42', '0', NULL, NULL, '用户默认拥有的权限，无需授权给用户');
 -- 创建用户与角色关联表
 DROP TABLE IF EXISTS user_role;
 CREATE TABLE IF NOT EXISTS user_role(
