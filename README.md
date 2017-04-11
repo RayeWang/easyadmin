@@ -30,3 +30,8 @@
 超级用户的id为-1，访问所有url都不会进行拦截
 
 默认权限的角色id为-1，用于设置公共的权限，所有用户默认被授予此权限
+##部分截图
+![登录页面](http://git.oschina.net/raywang2014/easyadmin/raw/master/imgs/20170411192433.png)
+![菜单管理](http://git.oschina.net/raywang2014/easyadmin/raw/master/imgs/20170411193119.png)
+![角色管理](http://git.oschina.net/raywang2014/easyadmin/raw/master/imgs/20170411193134.png)
+![用户管理](http://git.oschina.net/raywang2014/easyadmin/raw/master/imgs/20170411193149.png)
