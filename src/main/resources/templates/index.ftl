@@ -58,7 +58,7 @@
 
 			<div class="navbar-header pull-left">
 				<a href="index.ftl" class="navbar-brand"> <small> <i
-						class="fa fa-leaf"></i> Raye Admin
+						class="fa fa-leaf"></i> EasyAdmin
 				</small>
 				</a>
 			</div>
@@ -181,7 +181,7 @@
 						</ul>
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="Index">
-								欢迎使用Raye Admin
+								欢迎使用EasyAdmin
 							</div>
 						</div>
 					</div>

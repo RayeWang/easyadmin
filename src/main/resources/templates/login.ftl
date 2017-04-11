@@ -44,7 +44,7 @@
 							<div class="center">
 								<h1>
 									<i class="ace-icon fa fa-leaf green"></i>
-									<span class="grey" id="id-text2">Raye后台管理</span>
+									<span class="grey" id="id-text2">EasyAdmin后台管理</span>
 								</h1>
 								<h4 class="blue" id="id-company-text">&copy;By Raye</h4>
 							</div>
