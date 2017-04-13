@@ -18,8 +18,8 @@
 	</commentGenerator>
 
 	<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-		connectionURL="jdbc:mysql://123.207.255.205/zyzl?useUnicode=true&amp;characterEncoding=UTF-8" userId="cms"
-		password="Wo1993316.">
+		connectionURL="jdbc:mysql://localhost/admin?useUnicode=true&amp;characterEncoding=UTF-8" userId="admin"
+		password="123456">
 	</jdbcConnection>
 
 	<javaTypeResolver>
@@ -27,7 +27,7 @@
 	</javaTypeResolver>
 
 	<!-- generate Model -->
-	<javaModelGenerator targetPackage="wang.raye.zyzl.admin.model"
+	<javaModelGenerator targetPackage="wang.raye.admin.model"
 		targetProject="${entity.target.dir}">
 		<property name="enableSubPackages" value="true" />
 		<property name="trimStrings" value="true" />
@@ -36,14 +36,14 @@
 
 
 	<!-- 自动生成xml（但是好像一直没有生成功，反正也不用xml）
-	<sqlMapGenerator  targetPackage="wang.raye.zyzl.model.mapper"
+	<sqlMapGenerator  targetPackage="wang.raye.model.mapper"
 		targetProject="${service.resources.dir}">
 		<property name="enableSubPackages" value="true" />
 	</sqlMapGenerator> -->
 
 	<!-- 自动生成mapper接口, 可以是 ANNOTATEDMAPPER(注解), XMLMAPPER(xml), MIXEDMAPPER(不知道)-->
 	<javaClientGenerator type="ANNOTATEDMAPPER"
-		targetPackage="wang.raye.zyzl.admin.model.mapper" implementationPackage="wang.raye.zyzl.admin.model.mapper.impl"
+		targetPackage="wang.raye.admin.model.mapper" implementationPackage="wang.raye.admin.model.mapper.impl"
 		targetProject="${entity.target.dir}">
 		<property name="enableSubPackages" value="true" />
 	</javaClientGenerator>

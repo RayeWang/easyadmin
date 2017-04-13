@@ -5,9 +5,9 @@ spring:
   application:
     name: admin-managee
   datasource:
-    url: jdbc:mysql://123.207.255.205/zyzl?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-    username: cms
-    password: Wo1993316.
+    url: jdbc:mysql://localhost/admin?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: admin
+    password: 123456
     driver_class_namel: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
     
