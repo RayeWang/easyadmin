@@ -21,6 +21,8 @@
 
 [gson](https://github.com/google/gson)
 
+[lombok](https://projectlombok.org/)
+
 [Ace Admin](http://ace.jeka.by/)
 ##拦截器流程
 登录时读取当前用户拥有的可访问的url集合，在发起请求后，先判断是否是无需拦截的url（如登录地址），如果不是则从session中获取用户信息，如果获取失败说明没有登录或者登录已失效，则根据被调用的方法返回值类型，如果是String或者ModelAndView，则返回跳转到登录页面的ModelAndView，如果返回值是WebResult（指定的用@ResponseBody），则返回没有登录的json（因为没有找到判断方法是否有某个注解的方法，所以只能通过这个方法来实现了）；如果已经登录了，则判断当前url是否是在当前用户拥有的权限列表，如果在则调用方法，如果不在则同未登录处理一样，只是返回的是没有权限的页面或json
