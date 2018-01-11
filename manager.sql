@@ -1,9 +1,9 @@
 -- 后台管理相关sql语句
---创建菜单表
+-- 创建菜单表
 DROP TABLE IF EXISTS menu;
 CREATE TABLE IF NOT EXISTS menu(
 	id INT NOT NULL PRIMARY KEY AUTO_INCREMENT COMMENT '主键ID',
-	title VARCHAR(32) NOT NULL COMMENT '菜单名称',
+	name VARCHAR(32) NOT NULL COMMENT '菜单名称',
 	url VARCHAR(500) COMMENT '网址',
 	icon VARCHAR(20) COMMENT '显示的图标',
 	menu_type ENUM('0','1','2') NOT NULL DEFAULT '0' COMMENT '类型，0 菜单，1 连接网址,2 隐藏连接',
