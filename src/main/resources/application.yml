@@ -1,0 +1,28 @@
+
+server:
+  port: 8082
+spring:
+  application:
+    name: admin-managee
+  datasource:
+#    url: jdbc:mysql://ithan.me/gzxt?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+#    username: gzxt
+#    password: gzxt_A123
+    url: jdbc:mysql://localhost/gzxt?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
+    username: root
+    password: 123456
+    driver_class_namel: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    
+    max-active: 20
+    initial-size: 1
+    min-idle: 3
+    max-wait: 60000
+    time-between-eviction-runs-millis: 60000
+    min-evictable-idle-time-millis: 300000
+    test-while-idle: true
+    test-on-borrow: false
+    test-on-return: false
+    poolPreparedStatements: true
+
+debug: false
