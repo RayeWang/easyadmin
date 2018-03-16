@@ -18,8 +18,8 @@
 	</commentGenerator>
 
 	<jdbcConnection driverClass="com.mysql.jdbc.Driver"
-		connectionURL="jdbc:mysql://ithan.me/gzxt?useUnicode=true&amp;characterEncoding=UTF-8" userId="gzxt"
-		password="gzxt_A123">
+		connectionURL="jdbc:mysql://localhost/gzxt?useUnicode=true&amp;characterEncoding=UTF-8" userId="root"
+		password="123456">
 	</jdbcConnection>
 
 	<javaTypeResolver>
