@@ -5,9 +5,6 @@ spring:
   application:
     name: admin-managee
   datasource:
-#    url: jdbc:mysql://ithan.me/gzxt?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
-#    username: gzxt
-#    password: gzxt_A123
     url: jdbc:mysql://localhost/gzxt?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
     username: root
     password: 123456
