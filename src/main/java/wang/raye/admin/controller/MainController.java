@@ -65,7 +65,7 @@ public class MainController {
         AdminUser user = adminUserService.login(name,pass);
         if(user == null){
             map.put("error","用户名或密码错误");
-            return "admin/login";
+            return "login";
         }
         session.setAttribute("loginUser",user);
         session.setAttribute("authorities",menuService.selectAuthorities(user.getId()));

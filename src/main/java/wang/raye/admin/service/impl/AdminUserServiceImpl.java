@@ -58,6 +58,7 @@ public class AdminUserServiceImpl implements AdminUserService {
 
     @Override
     public boolean update(AdminUser user) {
+        user.setPsw(null);
         return mapper.updateByPrimaryKeySelective(user) > 0;
     }
 

@@ -26,4 +26,6 @@ public class Role {
     private Date updatetime;
     @Transient
     private int userid;
+    @Transient
+    private String createuser;
 }

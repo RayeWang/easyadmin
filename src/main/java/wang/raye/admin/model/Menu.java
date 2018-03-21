@@ -5,6 +5,7 @@ import lombok.Data;
 import javax.persistence.Id;
 import javax.persistence.Transient;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
 
 /**
@@ -47,4 +48,6 @@ public class Menu {
     private int roleid;
     @Transient
     private List<Menu> children;
+    @Transient
+    private HashMap<String,Object> additionalParameters;
 }

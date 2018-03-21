@@ -96,7 +96,7 @@
                         <tr role="row" class="odd">
                             <td class="center">
                                 <label class="pos-rel">
-                                    <input type="checkbox" name="checkbox" <#if (role.userid > 0)>checked</#if> value="${role.id}" class="ace">
+                                    <input type="checkbox" name="checkbox" <#if (role.userid != 0)>checked</#if> value="${role.id}" class="ace">
                                     <span class="lbl"></span>
                                 </label>
                             </td>
