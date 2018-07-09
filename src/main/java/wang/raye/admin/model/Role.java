@@ -2,6 +2,7 @@ package wang.raye.admin.model;
 
 import lombok.Data;
 
+import javax.persistence.Id;
 import javax.persistence.Transient;
 import java.util.Date;
 
@@ -11,6 +12,7 @@ import java.util.Date;
  */
 @Data
 public class Role {
+    @Id
     private Integer id;
 
     private String name;
