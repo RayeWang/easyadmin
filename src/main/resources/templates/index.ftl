@@ -155,6 +155,8 @@
 						<div class="tab-content">
 							<div role="tabpanel" class="tab-pane active" id="Index">
 								欢迎使用EasyAdmin
+								 <div id="piechart-placeholder"></div>
+                                				<div id="sales-charts"></div>
 							</div>
 						</div>
 					</div>
