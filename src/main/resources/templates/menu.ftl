@@ -90,7 +90,7 @@
 
                                 </div>
                                 <form class="form-horizontal" id="menuform" role="form" style="margin-top: 20px;">
-                                    <input type="hidden" name="parentId" id="parentId" value="0" />
+                                    <input type="hidden" name="parentid" id="parentid" value="0" />
                                     <input type="hidden" name="id" id="id" />
 
                                     <div class="form-group">
@@ -245,7 +245,7 @@
 	})
          .on('selected.fu.tree', function(e,data) {
              console.log(data);
-             $("#parentId").val(data.selected[0].parentId);
+             $("#parentid").val(data.selected[0].parentid);
              $("#id").val(data.selected[0].id);
              $("#form-name").val(data.selected[0].name);
              $("#form-icon").val(data.selected[0].icon);
@@ -309,7 +309,7 @@
         if($("#id").val() == null || $("#id").val()=="" || $("#id").val() == "0" ){
             alert("请选择父级");
         }
-        $("#parentId").val($("#id").val());
+        $("#parentid").val($("#id").val());
         $("#id").val("0");
         $("#form-name").val("");
         $("#form-icon").val("");
@@ -343,7 +343,7 @@
             url: '/admin/menu/edit',
             data:{
                 id:$("#id").val(),
-                parentId:$("#parentId").val(),
+                parentid:$("#parentid").val(),
                 name:$("#form-name").val(),
                 url:$("#form-url").val(),
                 icon:$("#form-icon").val(),
