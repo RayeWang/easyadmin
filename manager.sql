@@ -190,16 +190,16 @@ create temporary table if not exists menu_del_temp3 -- 不存在则创建临时�
   );
 	TRUNCATE TABLE menu_del_temp2;
 	TRUNCATE TABLE menu_del_temp; -- 清空临时表
-		INSERT INTO menu_del_temp SELECT id FROM  menu where parent_id=menuid;
+		INSERT INTO menu_del_temp SELECT id FROM  menu where parentid=menuid;
 	-- DELETE FROM category WHERE ID IN (SELECT id FROM category_del_temp);
-	INSERT INTO menu_del_temp2 SELECT id FROM  menu where parent_id IN (SELECT id FROM menu_del_temp);
+	INSERT INTO menu_del_temp2 SELECT id FROM  menu where parentid IN (SELECT id FROM menu_del_temp);
 	SELECT COUNT(id) INTO rowNUM FROM menu_del_temp2;
 	WHILE rowNUM > 0 DO
 		INSERT INTO menu_del_temp SELECT id FROM menu_del_temp2;
 		TRUNCATE TABLE menu_del_temp3;
 		INSERT INTO menu_del_temp3 SELECT id FROM menu_del_temp2;
 		TRUNCATE TABLE menu_del_temp2;
-		INSERT INTO menu_del_temp2 SELECT id FROM  menu where parent_id IN (SELECT id FROM menu_del_temp3);
+		INSERT INTO menu_del_temp2 SELECT id FROM  menu where parentid IN (SELECT id FROM menu_del_temp3);
 		SELECT COUNT(id) INTO rowNUM FROM menu_del_temp2;
 	END WHILE;
 	INSERT INTO menu_del_temp(id) values(menuid);
